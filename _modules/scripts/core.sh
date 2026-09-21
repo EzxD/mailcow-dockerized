@@ -98,6 +98,8 @@ detect_bad_asn() {
     fi
   elif [ "$response" -eq 200 ]; then
     echo -e "\e[33mCheck completed! Your IP is \e[32mclean\e[0m"
+  elif [ "$response" -eq 404 ]; then
+    echo -e "\e[33mNo ASN data available for your IP. Check skipped.\e[0m"
   elif [ "$response" -eq 429 ]; then
     echo -e "\e[33mCheck completed! \e[31mYour IP seems to be rate limited on the ASN Check service... please try again later!\e[0m"
   else
