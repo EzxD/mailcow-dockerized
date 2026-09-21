@@ -26,6 +26,7 @@ $template = 'reset-password.twig';
 $template_data = [
   'is_mobileconfig' => str_contains($_SESSION['index_query_string'], 'mobileconfig'),
   'is_reset_token_valid' => $is_reset_token_valid,
+  'password_policy' => $is_reset_token_valid ? password_complexity('html') : '',
   'reset_token' => $_GET['token']
 ];
 
