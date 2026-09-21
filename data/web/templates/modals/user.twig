@@ -359,6 +359,15 @@
               <input type="description" id="temp_alias_description" class="form-control" name="description" autocomplete="off">
             </div>
           </div>
+          <div class="row mb-4">
+            <label class="control-label col-sm-3" for="temp_alias_permanent">{{ lang.user.alias_select_validity }}</label>
+            <div class="col-sm-5">
+              <select id="temp_alias_permanent" name="permanent">
+                <option value="0" selected>{{ lang.user.expire_in }} 1 {{ lang.user.year }}</option>
+                <option value="1">{{ lang.user.expire_never }}</option>
+              </select>
+            </div>
+          </div>
           <div class="row">
             <div class="offset-sm-3 col-sm-9">
               <button class="btn btn-xs-lg d-block d-sm-inline btn-success" data-action="add_item" data-id="tempaliascreate" data-item="null" data-api-url='add/time_limited_alias' data-api-attr='' href="#">{{ lang.admin.add }}</button>

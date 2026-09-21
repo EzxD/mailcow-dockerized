@@ -29,6 +29,11 @@ $(document).ready(function() {
       $('#spam_score_value').val((Math.round(values[0] * 10) / 10) + ',' + (Math.round(values[1] * 10) / 10));
     });
   }
+  // Reset the validity for each new spam alias.
+  $('#tempAliasModal').on('show.bs.modal', function() {
+    $('#temp_alias_permanent').selectpicker('val', '0');
+  });
+
   // syncjobLogModal
   $('#syncjobLogModal').on('show.bs.modal', function(e) {
     var syncjob_id = $(e.relatedTarget).data('syncjob-id');
